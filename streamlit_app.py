@@ -29,8 +29,7 @@ st.dataframe(sales_by_month)
 st.line_chart(sales_by_month, y="Sales")
 
 
-# Ensure that Order_Date is in datetime format
-df["Order_Date"] = pd.to_datetime(df["Order_Date"])
+
 
 # (1) Add a drop-down for Category selection
 selected_category = st.selectbox("Select a Category", df["Category"].unique())
