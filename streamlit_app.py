@@ -35,15 +35,15 @@ st.line_chart(sales_by_month, y="Sales")
 selected_category = st.selectbox("Select a Category", df["Category"].unique())
 
 # (2) Add a multi-select for Sub_Category based on selected Category
-if "Sub-Category" not in df.columns:
-    st.error("The column 'Sub-Category' is missing from the dataset.")
+if "Sub_Category" not in df.columns:
+    st.error("The column 'Sub_Category' is missing from the dataset.")
 else:
     # (1) Add a drop-down for Category selection
     selected_category = st.selectbox("Select a Category", df["Category"].unique())
 
 # Filter dataframe by selected sub-categories
 if selected_sub_categories:
-    filtered_df = filtered_df[filtered_df["Sub-Category"].isin(selected_sub_categories)]
+    filtered_df = filtered_df[filtered_df["Sub_Category"].isin(selected_sub_categories)]
 
 # (3) Show a line chart of sales for the selected items
 if not filtered_df.empty:
