@@ -44,7 +44,7 @@ if selected_sub_categories:
 
 # (3) Show a line chart of sales for the selected items
 sales_chart = filtered_df.groupby('Order_Date')['Sales'].sum().reset_index()
-    st.line_chart(sales_chart, x='Order_Date', y='Sales')
+st.line_chart(sales_chart, x='Order_Date', y='Sales')
 
 # (4) Calculate metrics for total sales, total profit, and overall profit margin (%)
 if not filtered_df.empty:
